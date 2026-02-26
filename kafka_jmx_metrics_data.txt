@@ -1,0 +1,628 @@
+# ======================================================================
+# KAFKA CLUSTER JMX METRICS - PRODUCTION SIMULATION
+# Cluster: prod-kafka-01 (3 Brokers, 25 Topics, 150 Partitions)
+# Generated: 2024-01-15T14:30:00Z
+# ======================================================================
+
+# ----------------------------------------------------------------------
+# BROKER 1 (ID: 1001, Host: kafka-broker-01.prod.internal)
+# ----------------------------------------------------------------------
+
+# --- Broker Metadata & State ---
+kafka_server_kafkaserver_brokerstate{clientId="KafkaServer",broker="1001",} 3.0
+kafka_server_kafkaserver_clusterid{clientId="KafkaServer",broker="1001",clusterId="prod-kafka-abc123def456",} 1.0
+
+# --- Controller Metrics (Broker 1 is the controller) ---
+kafka_controller_kafkacontroller_activecontrollercount{clientId="ControllerMetrics",broker="1001",} 1.0
+kafka_controller_controllerstats_globalpartitioncount{clientId="ControllerMetrics",broker="1001",} 450.0
+kafka_controller_controllerstats_globaltopiccount{clientId="ControllerMetrics",broker="1001",} 25.0
+kafka_controller_kafkacontroller_offlinepartitionscount{clientId="ControllerMetrics",broker="1001",} 0.0
+kafka_controller_kafkacontroller_preferredreplicaimbalancecount{clientId="ControllerMetrics",broker="1001",} 2.0
+
+# --- Replica Manager Metrics ---
+kafka_server_replicamanager_leadercount{clientId="ReplicaManager",broker="1001",} 156.0
+kafka_server_replicamanager_partitioncount{clientId="ReplicaManager",broker="1001",} 287.0
+kafka_server_replicamanager_underreplicatedpartitions{clientId="ReplicaManager",broker="1001",} 0.0
+kafka_server_replicamanager_under_min_isr_partitions{clientId="ReplicaManager",broker="1001",} 0.0
+kafka_server_replicamanager_atminisrpartitions{clientId="ReplicaManager",broker="1001",} 275.0
+kafka_server_replicamanager_offlinereplicacount{clientId="ReplicaManager",broker="1001",} 0.0
+kafka_server_replicamanager_isrexpands_per_sec{clientId="ReplicaManager",broker="1001",} 0.2
+kafka_server_replicamanager_isrshrinks_per_sec{clientId="ReplicaManager",broker="1001",} 0.1
+kafka_server_replicamanager_failed_isrupdates_per_sec{clientId="ReplicaManager",broker="1001",} 0.0
+
+# --- Log Flush Stats ---
+kafka_server_logflushstats_logflushtime_ms_avg{clientId="LogFlushStats",broker="1001",} 12.5
+kafka_server_logflushstats_logflushtime_ms_max{clientId="LogFlushStats",broker="1001",} 47.2
+kafka_server_logflushstats_logflushtime_ms_50th{clientId="LogFlushStats",broker="1001",} 11.8
+kafka_server_logflushstats_logflushtime_ms_99th{clientId="LogFlushStats",broker="1001",} 42.1
+kafka_server_logflushstats_logflushtime_ms_999th{clientId="LogFlushStats",broker="1001",} 46.5
+
+# --- Socket Server Metrics ---
+kafka_network_socket_server_networkprocessoravgidlepercent{clientId="SocketServer",broker="1001",} 0.94
+kafka_network_socket_server_requestqueue_size{clientId="SocketServer",broker="1001",} 3.0
+kafka_network_socket_server_responsequeue_size{clientId="SocketServer",broker="1001",} 5.0
+kafka_network_socket_server_connectioncount{clientId="SocketServer",broker="1001",} 247.0
+kafka_network_socket_server_successful_authentication{clientId="SocketServer",broker="1001",} 1240.0
+kafka_network_socket_server_failed_authentication{clientId="SocketServer",broker="1001",} 3.0
+
+# --- Request Metrics - Produce ---
+kafka_network_requestmetrics_totaltimems_count{clientId="RequestMetrics",request="Produce",broker="1001",} 18.5
+kafka_network_requestmetrics_requestqueuetimems_count{clientId="RequestMetrics",request="Produce",broker="1001",} 2.1
+kafka_network_requestmetrics_localtimems_count{clientId="RequestMetrics",request="Produce",broker="1001",} 1.3
+kafka_network_requestmetrics_remotetimems_count{clientId="RequestMetrics",request="Produce",broker="1001",} 14.7
+kafka_network_requestmetrics_throttletimems_count{clientId="RequestMetrics",request="Produce",broker="1001",} 0.4
+kafka_network_requestmetrics_requests_per_sec{clientId="RequestMetrics",request="Produce",broker="1001",} 2450.0
+
+# --- Request Metrics - FetchConsumer ---
+kafka_network_requestmetrics_totaltimems_count{clientId="RequestMetrics",request="FetchConsumer",broker="1001",} 22.3
+kafka_network_requestmetrics_requestqueuetimems_count{clientId="RequestMetrics",request="FetchConsumer",broker="1001",} 3.2
+kafka_network_requestmetrics_localtimems_count{clientId="RequestMetrics",request="FetchConsumer",broker="1001",} 2.8
+kafka_network_requestmetrics_remotetimems_count{clientId="RequestMetrics",request="FetchConsumer",broker="1001",} 15.9
+kafka_network_requestmetrics_throttletimems_count{clientId="RequestMetrics",request="FetchConsumer",broker="1001",} 0.4
+kafka_network_requestmetrics_requests_per_sec{clientId="RequestMetrics",request="FetchConsumer",broker="1001",} 1870.0
+
+# --- Request Metrics - FetchFollower ---
+kafka_network_requestmetrics_totaltimems_count{clientId="RequestMetrics",request="FetchFollower",broker="1001",} 12.8
+kafka_network_requestmetrics_requests_per_sec{clientId="RequestMetrics",request="FetchFollower",broker="1001",} 430.0
+
+# --- Request Metrics - Metadata ---
+kafka_network_requestmetrics_totaltimems_count{clientId="RequestMetrics",request="Metadata",broker="1001",} 5.7
+kafka_network_requestmetrics_requests_per_sec{clientId="RequestMetrics",request="Metadata",broker="1001",} 890.0
+
+# --- Request Metrics - UpdateMetadata ---
+kafka_network_requestmetrics_totaltimems_count{clientId="RequestMetrics",request="UpdateMetadata",broker="1001",} 8.2
+kafka_network_requestmetrics_requests_per_sec{clientId="RequestMetrics",request="UpdateMetadata",broker="1001",} 12.0
+
+# --- Broker Topic Metrics - Aggregate ---
+kafka_server_brokertopicmetrics_messagesinpersec_count{clientId="BrokerMetrics",broker="1001",} 42500.0
+kafka_server_brokertopicmetrics_bytesinpersec_count{clientId="BrokerMetrics",broker="1001",} 44564480.0
+kafka_server_brokertopicmetrics_bytesoutpersec_count{clientId="BrokerMetrics",broker="1001",} 35651584.0
+kafka_server_brokertopicmetrics_totalproducerequests_per_sec{clientId="BrokerMetrics",broker="1001",} 2450.0
+kafka_server_brokertopicmetrics_totalfetchrequests_per_sec{clientId="BrokerMetrics",broker="1001",} 2300.0
+kafka_server_brokertopicmetrics_failedproducerequests_per_sec{clientId="BrokerMetrics",broker="1001",} 12.0
+kafka_server_brokertopicmetrics_failedfetchrequests_per_sec{clientId="BrokerMetrics",broker="1001",} 8.0
+
+# ----------------------------------------------------------------------
+# BROKER 2 (ID: 1002, Host: kafka-broker-02.prod.internal)
+# ----------------------------------------------------------------------
+
+kafka_server_kafkaserver_brokerstate{clientId="KafkaServer",broker="1002",} 3.0
+kafka_server_kafkaserver_clusterid{clientId="KafkaServer",broker="1002",clusterId="prod-kafka-abc123def456",} 1.0
+
+# --- Replica Manager Metrics ---
+kafka_server_replicamanager_leadercount{clientId="ReplicaManager",broker="1002",} 147.0
+kafka_server_replicamanager_partitioncount{clientId="ReplicaManager",broker="1002",} 281.0
+kafka_server_replicamanager_underreplicatedpartitions{clientId="ReplicaManager",broker="1002",} 0.0
+kafka_server_replicamanager_under_min_isr_partitions{clientId="ReplicaManager",broker="1002",} 0.0
+kafka_server_replicamanager_atminisrpartitions{clientId="ReplicaManager",broker="1002",} 270.0
+kafka_server_replicamanager_offlinereplicacount{clientId="ReplicaManager",broker="1002",} 0.0
+
+# --- Socket Server Metrics ---
+kafka_network_socket_server_networkprocessoravgidlepercent{clientId="SocketServer",broker="1002",} 0.92
+kafka_network_socket_server_requestqueue_size{clientId="SocketServer",broker="1002",} 5.0
+kafka_network_socket_server_responsequeue_size{clientId="SocketServer",broker="1002",} 7.0
+kafka_network_socket_server_connectioncount{clientId="SocketServer",broker="1002",} 231.0
+
+# --- Request Metrics - Produce ---
+kafka_network_requestmetrics_totaltimems_count{clientId="RequestMetrics",request="Produce",broker="1002",} 19.2
+kafka_network_requestmetrics_requests_per_sec{clientId="RequestMetrics",request="Produce",broker="1002",} 2380.0
+
+# --- Request Metrics - FetchConsumer ---
+kafka_network_requestmetrics_totaltimems_count{clientId="RequestMetrics",request="FetchConsumer",broker="1002",} 23.1
+kafka_network_requestmetrics_requests_per_sec{clientId="RequestMetrics",request="FetchConsumer",broker="1002",} 1790.0
+
+# --- Broker Topic Metrics - Aggregate ---
+kafka_server_brokertopicmetrics_messagesinpersec_count{clientId="BrokerMetrics",broker="1002",} 39800.0
+kafka_server_brokertopicmetrics_bytesinpersec_count{clientId="BrokerMetrics",broker="1002",} 41943040.0
+kafka_server_brokertopicmetrics_bytesoutpersec_count{clientId="BrokerMetrics",broker="1002",} 33554432.0
+
+# ----------------------------------------------------------------------
+# BROKER 3 (ID: 1003, Host: kafka-broker-03.prod.internal)
+# ----------------------------------------------------------------------
+
+kafka_server_kafkaserver_brokerstate{clientId="KafkaServer",broker="1003",} 3.0
+kafka_server_kafkaserver_clusterid{clientId="KafkaServer",broker="1003",clusterId="prod-kafka-abc123def456",} 1.0
+
+# --- Replica Manager Metrics ---
+kafka_server_replicamanager_leadercount{clientId="ReplicaManager",broker="1003",} 147.0
+kafka_server_replicamanager_partitioncount{clientId="ReplicaManager",broker="1003",} 282.0
+kafka_server_replicamanager_underreplicatedpartitions{clientId="ReplicaManager",broker="1003",} 0.0
+kafka_server_replicamanager_under_min_isr_partitions{clientId="ReplicaManager",broker="1003",} 0.0
+
+# --- Socket Server Metrics ---
+kafka_network_socket_server_networkprocessoravgidlepercent{clientId="SocketServer",broker="1003",} 0.93
+kafka_network_socket_server_requestqueue_size{clientId="SocketServer",broker="1003",} 4.0
+kafka_network_socket_server_responsequeue_size{clientId="SocketServer",broker="1003",} 6.0
+kafka_network_socket_server_connectioncount{clientId="SocketServer",broker="1003",} 238.0
+
+# --- Request Metrics - Produce ---
+kafka_network_requestmetrics_totaltimems_count{clientId="RequestMetrics",request="Produce",broker="1003",} 18.9
+kafka_network_requestmetrics_requests_per_sec{clientId="RequestMetrics",request="Produce",broker="1003",} 2410.0
+
+# --- Request Metrics - FetchConsumer ---
+kafka_network_requestmetrics_totaltimems_count{clientId="RequestMetrics",request="FetchConsumer",broker="1003",} 22.7
+kafka_network_requestmetrics_requests_per_sec{clientId="RequestMetrics",request="FetchConsumer",broker="1003",} 1820.0
+
+# --- Broker Topic Metrics - Aggregate ---
+kafka_server_brokertopicmetrics_messagesinpersec_count{clientId="BrokerMetrics",broker="1003",} 41200.0
+kafka_server_brokertopicmetrics_bytesinpersec_count{clientId="BrokerMetrics",broker="1003",} 43253760.0
+kafka_server_brokertopicmetrics_bytesoutpersec_count{clientId="BrokerMetrics",broker="1003",} 34603008.0
+
+# ======================================================================
+# TOPIC-LEVEL METRICS (25 Topics, 3 Partitions each shown as example)
+# ======================================================================
+
+# ----------------------------------------------------------------------
+# Topic: orders (12 partitions, replication-factor: 3)
+# ----------------------------------------------------------------------
+
+# Partition 0
+kafka_log_log_size{clientId="ReplicaManager",broker="1001",topic="orders",partition="0",} 12884901888.0
+kafka_log_log_size{clientId="ReplicaManager",broker="1002",topic="orders",partition="0",} 12884901888.0
+kafka_log_log_size{clientId="ReplicaManager",broker="1003",topic="orders",partition="0",} 12884901888.0
+kafka_log_log_end_offset{clientId="ReplicaManager",broker="1001",topic="orders",partition="0",} 15420000.0
+kafka_log_log_end_offset{clientId="ReplicaManager",broker="1002",topic="orders",partition="0",} 15420000.0
+kafka_log_log_end_offset{clientId="ReplicaManager",broker="1003",topic="orders",partition="0",} 15420000.0
+kafka_server_brokertopicmetrics_messagesinpersec_count{clientId="BrokerMetrics",broker="1001",topic="orders",partition="0",} 1250.0
+kafka_server_brokertopicmetrics_messagesinpersec_count{clientId="BrokerMetrics",broker="1002",topic="orders",partition="0",} 0.0
+kafka_server_brokertopicmetrics_messagesinpersec_count{clientId="BrokerMetrics",broker="1003",topic="orders",partition="0",} 0.0
+kafka_server_brokertopicmetrics_bytesinpersec_count{clientId="BrokerMetrics",broker="1001",topic="orders",partition="0",} 1310720.0
+kafka_server_brokertopicmetrics_bytesoutpersec_count{clientId="BrokerMetrics",broker="1001",topic="orders",partition="0",} 1048576.0
+
+# Partition 1
+kafka_log_log_size{clientId="ReplicaManager",broker="1002",topic="orders",partition="1",} 12884901888.0
+kafka_log_log_size{clientId="ReplicaManager",broker="1003",topic="orders",partition="1",} 12884901888.0
+kafka_log_log_size{clientId="ReplicaManager",broker="1001",topic="orders",partition="1",} 12884901888.0
+kafka_log_log_end_offset{clientId="ReplicaManager",broker="1002",topic="orders",partition="1",} 15430000.0
+kafka_log_log_end_offset{clientId="ReplicaManager",broker="1003",topic="orders",partition="1",} 15430000.0
+kafka_log_log_end_offset{clientId="ReplicaManager",broker="1001",topic="orders",partition="1",} 15430000.0
+kafka_server_brokertopicmetrics_messagesinpersec_count{clientId="BrokerMetrics",broker="1002",topic="orders",partition="1",} 1250.0
+kafka_server_brokertopicmetrics_bytesinpersec_count{clientId="BrokerMetrics",broker="1002",topic="orders",partition="1",} 1310720.0
+
+# Partition 2
+kafka_log_log_size{clientId="ReplicaManager",broker="1003",topic="orders",partition="2",} 12884901888.0
+kafka_log_log_size{clientId="ReplicaManager",broker="1001",topic="orders",partition="2",} 12884901888.0
+kafka_log_log_size{clientId="ReplicaManager",broker="1002",topic="orders",partition="2",} 12884901888.0
+kafka_log_log_end_offset{clientId="ReplicaManager",broker="1003",topic="orders",partition="2",} 15415000.0
+kafka_server_brokertopicmetrics_messagesinpersec_count{clientId="BrokerMetrics",broker="1003",topic="orders",partition="2",} 1250.0
+
+# Partition 3-11 (similar patterns, varying leaders)
+kafka_log_log_size{clientId="ReplicaManager",broker="1001",topic="orders",partition="3",} 12884901888.0
+kafka_server_brokertopicmetrics_messagesinpersec_count{clientId="BrokerMetrics",broker="1001",topic="orders",partition="3",} 1250.0
+kafka_log_log_size{clientId="ReplicaManager",broker="1002",topic="orders",partition="4",} 12884901888.0
+kafka_server_brokertopicmetrics_messagesinpersec_count{clientId="BrokerMetrics",broker="1002",topic="orders",partition="4",} 1250.0
+kafka_log_log_size{clientId="ReplicaManager",broker="1003",topic="orders",partition="5",} 12884901888.0
+kafka_server_brokertopicmetrics_messagesinpersec_count{clientId="BrokerMetrics",broker="1003",topic="orders",partition="5",} 1250.0
+kafka_log_log_size{clientId="ReplicaManager",broker="1001",topic="orders",partition="6",} 12884901888.0
+kafka_server_brokertopicmetrics_messagesinpersec_count{clientId="BrokerMetrics",broker="1001",topic="orders",partition="6",} 1250.0
+kafka_log_log_size{clientId="ReplicaManager",broker="1002",topic="orders",partition="7",} 12884901888.0
+kafka_server_brokertopicmetrics_messagesinpersec_count{clientId="BrokerMetrics",broker="1002",topic="orders",partition="7",} 1250.0
+kafka_log_log_size{clientId="ReplicaManager",broker="1003",topic="orders",partition="8",} 12884901888.0
+kafka_server_brokertopicmetrics_messagesinpersec_count{clientId="BrokerMetrics",broker="1003",topic="orders",partition="8",} 1250.0
+kafka_log_log_size{clientId="ReplicaManager",broker="1001",topic="orders",partition="9",} 12884901888.0
+kafka_server_brokertopicmetrics_messagesinpersec_count{clientId="BrokerMetrics",broker="1001",topic="orders",partition="9",} 1250.0
+kafka_log_log_size{clientId="ReplicaManager",broker="1002",topic="orders",partition="10",} 12884901888.0
+kafka_server_brokertopicmetrics_messagesinpersec_count{clientId="BrokerMetrics",broker="1002",topic="orders",partition="10",} 1250.0
+kafka_log_log_size{clientId="ReplicaManager",broker="1003",topic="orders",partition="11",} 12884901888.0
+kafka_server_brokertopicmetrics_messagesinpersec_count{clientId="BrokerMetrics",broker="1003",topic="orders",partition="11",} 1250.0
+
+# Topic summary for orders
+kafka_server_brokertopicmetrics_messagesinpersec_count{clientId="BrokerMetrics",broker="1001",topic="orders",} 5000.0
+kafka_server_brokertopicmetrics_messagesinpersec_count{clientId="BrokerMetrics",broker="1002",topic="orders",} 5000.0
+kafka_server_brokertopicmetrics_messagesinpersec_count{clientId="BrokerMetrics",broker="1003",topic="orders",} 5000.0
+kafka_server_brokertopicmetrics_bytesinpersec_count{clientId="BrokerMetrics",broker="1001",topic="orders",} 5242880.0
+kafka_server_brokertopicmetrics_bytesoutpersec_count{clientId="BrokerMetrics",broker="1001",topic="orders",} 4194304.0
+
+# ----------------------------------------------------------------------
+# Topic: transactions (8 partitions)
+# ----------------------------------------------------------------------
+
+# Partition 0
+kafka_log_log_size{clientId="ReplicaManager",broker="1002",topic="transactions",partition="0",} 6442450944.0
+kafka_log_log_end_offset{clientId="ReplicaManager",broker="1002",topic="transactions",partition="0",} 7710000.0
+kafka_server_brokertopicmetrics_messagesinpersec_count{clientId="BrokerMetrics",broker="1002",topic="transactions",partition="0",} 625.0
+kafka_server_brokertopicmetrics_bytesinpersec_count{clientId="BrokerMetrics",broker="1002",topic="transactions",partition="0",} 655360.0
+
+# Partition 1
+kafka_log_log_size{clientId="ReplicaManager",broker="1003",topic="transactions",partition="1",} 6442450944.0
+kafka_server_brokertopicmetrics_messagesinpersec_count{clientId="BrokerMetrics",broker="1003",topic="transactions",partition="1",} 625.0
+
+# Partition 2
+kafka_log_log_size{clientId="ReplicaManager",broker="1001",topic="transactions",partition="2",} 6442450944.0
+kafka_server_brokertopicmetrics_messagesinpersec_count{clientId="BrokerMetrics",broker="1001",topic="transactions",partition="2",} 625.0
+
+# Partition 3
+kafka_log_log_size{clientId="ReplicaManager",broker="1002",topic="transactions",partition="3",} 6442450944.0
+kafka_server_brokertopicmetrics_messagesinpersec_count{clientId="BrokerMetrics",broker="1002",topic="transactions",partition="3",} 625.0
+
+# Partition 4
+kafka_log_log_size{clientId="ReplicaManager",broker="1003",topic="transactions",partition="4",} 6442450944.0
+kafka_server_brokertopicmetrics_messagesinpersec_count{clientId="BrokerMetrics",broker="1003",topic="transactions",partition="4",} 625.0
+
+# Partition 5
+kafka_log_log_size{clientId="ReplicaManager",broker="1001",topic="transactions",partition="5",} 6442450944.0
+kafka_server_brokertopicmetrics_messagesinpersec_count{clientId="BrokerMetrics",broker="1001",topic="transactions",partition="5",} 625.0
+
+# Partition 6
+kafka_log_log_size{clientId="ReplicaManager",broker="1002",topic="transactions",partition="6",} 6442450944.0
+kafka_server_brokertopicmetrics_messagesinpersec_count{clientId="BrokerMetrics",broker="1002",topic="transactions",partition="6",} 625.0
+
+# Partition 7
+kafka_log_log_size{clientId="ReplicaManager",broker="1003",topic="transactions",partition="7",} 6442450944.0
+kafka_server_brokertopicmetrics_messagesinpersec_count{clientId="BrokerMetrics",broker="1003",topic="transactions",partition="7",} 625.0
+
+# Topic summary
+kafka_server_brokertopicmetrics_messagesinpersec_count{clientId="BrokerMetrics",broker="1002",topic="transactions",} 2500.0
+
+# ----------------------------------------------------------------------
+# Topic: user-events (15 partitions)
+# ----------------------------------------------------------------------
+
+# Partitions 0-14
+kafka_log_log_size{clientId="ReplicaManager",broker="1001",topic="user-events",partition="0",} 2147483648.0
+kafka_server_brokertopicmetrics_messagesinpersec_count{clientId="BrokerMetrics",broker="1001",topic="user-events",partition="0",} 160.0
+kafka_log_log_size{clientId="ReplicaManager",broker="1002",topic="user-events",partition="1",} 2147483648.0
+kafka_server_brokertopicmetrics_messagesinpersec_count{clientId="BrokerMetrics",broker="1002",topic="user-events",partition="1",} 160.0
+kafka_log_log_size{clientId="ReplicaManager",broker="1003",topic="user-events",partition="2",} 2147483648.0
+kafka_server_brokertopicmetrics_messagesinpersec_count{clientId="BrokerMetrics",broker="1003",topic="user-events",partition="2",} 160.0
+kafka_log_log_size{clientId="ReplicaManager",broker="1001",topic="user-events",partition="3",} 2147483648.0
+kafka_server_brokertopicmetrics_messagesinpersec_count{clientId="BrokerMetrics",broker="1001",topic="user-events",partition="3",} 160.0
+kafka_log_log_size{clientId="ReplicaManager",broker="1002",topic="user-events",partition="4",} 2147483648.0
+kafka_server_brokertopicmetrics_messagesinpersec_count{clientId="BrokerMetrics",broker="1002",topic="user-events",partition="4",} 160.0
+kafka_log_log_size{clientId="ReplicaManager",broker="1003",topic="user-events",partition="5",} 2147483648.0
+kafka_server_brokertopicmetrics_messagesinpersec_count{clientId="BrokerMetrics",broker="1003",topic="user-events",partition="5",} 160.0
+kafka_log_log_size{clientId="ReplicaManager",broker="1001",topic="user-events",partition="6",} 2147483648.0
+kafka_server_brokertopicmetrics_messagesinpersec_count{clientId="BrokerMetrics",broker="1001",topic="user-events",partition="6",} 160.0
+kafka_log_log_size{clientId="ReplicaManager",broker="1002",topic="user-events",partition="7",} 2147483648.0
+kafka_server_brokertopicmetrics_messagesinpersec_count{clientId="BrokerMetrics",broker="1002",topic="user-events",partition="7",} 160.0
+kafka_log_log_size{clientId="ReplicaManager",broker="1003",topic="user-events",partition="8",} 2147483648.0
+kafka_server_brokertopicmetrics_messagesinpersec_count{clientId="BrokerMetrics",broker="1003",topic="user-events",partition="8",} 160.0
+kafka_log_log_size{clientId="ReplicaManager",broker="1001",topic="user-events",partition="9",} 2147483648.0
+kafka_server_brokertopicmetrics_messagesinpersec_count{clientId="BrokerMetrics",broker="1001",topic="user-events",partition="9",} 160.0
+kafka_log_log_size{clientId="ReplicaManager",broker="1002",topic="user-events",partition="10",} 2147483648.0
+kafka_server_brokertopicmetrics_messagesinpersec_count{clientId="BrokerMetrics",broker="1002",topic="user-events",partition="10",} 160.0
+kafka_log_log_size{clientId="ReplicaManager",broker="1003",topic="user-events",partition="11",} 2147483648.0
+kafka_server_brokertopicmetrics_messagesinpersec_count{clientId="BrokerMetrics",broker="1003",topic="user-events",partition="11",} 160.0
+kafka_log_log_size{clientId="ReplicaManager",broker="1001",topic="user-events",partition="12",} 2147483648.0
+kafka_server_brokertopicmetrics_messagesinpersec_count{clientId="BrokerMetrics",broker="1001",topic="user-events",partition="12",} 160.0
+kafka_log_log_size{clientId="ReplicaManager",broker="1002",topic="user-events",partition="13",} 2147483648.0
+kafka_server_brokertopicmetrics_messagesinpersec_count{clientId="BrokerMetrics",broker="1002",topic="user-events",partition="13",} 160.0
+kafka_log_log_size{clientId="ReplicaManager",broker="1003",topic="user-events",partition="14",} 2147483648.0
+kafka_server_brokertopicmetrics_messagesinpersec_count{clientId="BrokerMetrics",broker="1003",topic="user-events",partition="14",} 160.0
+
+# ----------------------------------------------------------------------
+# Topic: clickstream (10 partitions)
+# ----------------------------------------------------------------------
+
+# Partitions 0-9
+kafka_log_log_size{clientId="ReplicaManager",broker="1001",topic="clickstream",partition="0",} 1073741824.0
+kafka_server_brokertopicmetrics_messagesinpersec_count{clientId="BrokerMetrics",broker="1001",topic="clickstream",partition="0",} 300.0
+kafka_log_log_size{clientId="ReplicaManager",broker="1002",topic="clickstream",partition="1",} 1073741824.0
+kafka_server_brokertopicmetrics_messagesinpersec_count{clientId="BrokerMetrics",broker="1002",topic="clickstream",partition="1",} 300.0
+kafka_log_log_size{clientId="ReplicaManager",broker="1003",topic="clickstream",partition="2",} 1073741824.0
+kafka_server_brokertopicmetrics_messagesinpersec_count{clientId="BrokerMetrics",broker="1003",topic="clickstream",partition="2",} 300.0
+kafka_log_log_size{clientId="ReplicaManager",broker="1001",topic="clickstream",partition="3",} 1073741824.0
+kafka_server_brokertopicmetrics_messagesinpersec_count{clientId="BrokerMetrics",broker="1001",topic="clickstream",partition="3",} 300.0
+kafka_log_log_size{clientId="ReplicaManager",broker="1002",topic="clickstream",partition="4",} 1073741824.0
+kafka_server_brokertopicmetrics_messagesinpersec_count{clientId="BrokerMetrics",broker="1002",topic="clickstream",partition="4",} 300.0
+kafka_log_log_size{clientId="ReplicaManager",broker="1003",topic="clickstream",partition="5",} 1073741824.0
+kafka_server_brokertopicmetrics_messagesinpersec_count{clientId="BrokerMetrics",broker="1003",topic="clickstream",partition="5",} 300.0
+kafka_log_log_size{clientId="ReplicaManager",broker="1001",topic="clickstream",partition="6",} 1073741824.0
+kafka_server_brokertopicmetrics_messagesinpersec_count{clientId="BrokerMetrics",broker="1001",topic="clickstream",partition="6",} 300.0
+kafka_log_log_size{clientId="ReplicaManager",broker="1002",topic="clickstream",partition="7",} 1073741824.0
+kafka_server_brokertopicmetrics_messagesinpersec_count{clientId="BrokerMetrics",broker="1002",topic="clickstream",partition="7",} 300.0
+kafka_log_log_size{clientId="ReplicaManager",broker="1003",topic="clickstream",partition="8",} 1073741824.0
+kafka_server_brokertopicmetrics_messagesinpersec_count{clientId="BrokerMetrics",broker="1003",topic="clickstream",partition="8",} 300.0
+kafka_log_log_size{clientId="ReplicaManager",broker="1001",topic="clickstream",partition="9",} 1073741824.0
+kafka_server_brokertopicmetrics_messagesinpersec_count{clientId="BrokerMetrics",broker="1001",topic="clickstream",partition="9",} 300.0
+
+# ----------------------------------------------------------------------
+# Topic: metrics (6 partitions)
+# ----------------------------------------------------------------------
+
+# Partitions 0-5
+kafka_log_log_size{clientId="ReplicaManager",broker="1002",topic="metrics",partition="0",} 536870912.0
+kafka_server_brokertopicmetrics_messagesinpersec_count{clientId="BrokerMetrics",broker="1002",topic="metrics",partition="0",} 50.0
+kafka_log_log_size{clientId="ReplicaManager",broker="1003",topic="metrics",partition="1",} 536870912.0
+kafka_server_brokertopicmetrics_messagesinpersec_count{clientId="BrokerMetrics",broker="1003",topic="metrics",partition="1",} 50.0
+kafka_log_log_size{clientId="ReplicaManager",broker="1001",topic="metrics",partition="2",} 536870912.0
+kafka_server_brokertopicmetrics_messagesinpersec_count{clientId="BrokerMetrics",broker="1001",topic="metrics",partition="2",} 50.0
+kafka_log_log_size{clientId="ReplicaManager",broker="1002",topic="metrics",partition="3",} 536870912.0
+kafka_server_brokertopicmetrics_messagesinpersec_count{clientId="BrokerMetrics",broker="1002",topic="metrics",partition="3",} 50.0
+kafka_log_log_size{clientId="ReplicaManager",broker="1003",topic="metrics",partition="4",} 536870912.0
+kafka_server_brokertopicmetrics_messagesinpersec_count{clientId="BrokerMetrics",broker="1003",topic="metrics",partition="4",} 50.0
+kafka_log_log_size{clientId="ReplicaManager",broker="1001",topic="metrics",partition="5",} 536870912.0
+kafka_server_brokertopicmetrics_messagesinpersec_count{clientId="BrokerMetrics",broker="1001",topic="metrics",partition="5",} 50.0
+
+# ----------------------------------------------------------------------
+# Topic: logs (8 partitions)
+# ----------------------------------------------------------------------
+
+# Partitions 0-7
+kafka_log_log_size{clientId="ReplicaManager",broker="1003",topic="logs",partition="0",} 8589934592.0
+kafka_server_brokertopicmetrics_messagesinpersec_count{clientId="BrokerMetrics",broker="1003",topic="logs",partition="0",} 450.0
+kafka_log_log_size{clientId="ReplicaManager",broker="1001",topic="logs",partition="1",} 8589934592.0
+kafka_server_brokertopicmetrics_messagesinpersec_count{clientId="BrokerMetrics",broker="1001",topic="logs",partition="1",} 450.0
+kafka_log_log_size{clientId="ReplicaManager",broker="1002",topic="logs",partition="2",} 8589934592.0
+kafka_server_brokertopicmetrics_messagesinpersec_count{clientId="BrokerMetrics",broker="1002",topic="logs",partition="2",} 450.0
+kafka_log_log_size{clientId="ReplicaManager",broker="1003",topic="logs",partition="3",} 8589934592.0
+kafka_server_brokertopicmetrics_messagesinpersec_count{clientId="BrokerMetrics",broker="1003",topic="logs",partition="3",} 450.0
+kafka_log_log_size{clientId="ReplicaManager",broker="1001",topic="logs",partition="4",} 8589934592.0
+kafka_server_brokertopicmetrics_messagesinpersec_count{clientId="BrokerMetrics",broker="1001",topic="logs",partition="4",} 450.0
+kafka_log_log_size{clientId="ReplicaManager",broker="1002",topic="logs",partition="5",} 8589934592.0
+kafka_server_brokertopicmetrics_messagesinpersec_count{clientId="BrokerMetrics",broker="1002",topic="logs",partition="5",} 450.0
+kafka_log_log_size{clientId="ReplicaManager",broker="1003",topic="logs",partition="6",} 8589934592.0
+kafka_server_brokertopicmetrics_messagesinpersec_count{clientId="BrokerMetrics",broker="1003",topic="logs",partition="6",} 450.0
+kafka_log_log_size{clientId="ReplicaManager",broker="1001",topic="logs",partition="7",} 8589934592.0
+kafka_server_brokertopicmetrics_messagesinpersec_count{clientId="BrokerMetrics",broker="1001",topic="logs",partition="7",} 450.0
+
+# ======================================================================
+# PRODUCER METRICS (15 Producers)
+# ======================================================================
+
+# ----------------------------------------------------------------------
+# Producer: order-service-01 (Client ID: producer-1, App: order-service)
+# ----------------------------------------------------------------------
+
+kafka_producer_producer_metrics_record_send_rate{clientId="producer-1",broker="1001",client_software_name="order-service",} 1250.0
+kafka_producer_producer_metrics_record_send_total{clientId="producer-1",broker="1001",} 45000000.0
+kafka_producer_producer_metrics_record_error_rate{clientId="producer-1",broker="1001",} 0.002
+kafka_producer_producer_metrics_record_error_total{clientId="producer-1",broker="1001",} 90.0
+kafka_producer_producer_metrics_record_retry_rate{clientId="producer-1",broker="1001",} 0.005
+kafka_producer_producer_metrics_record_retry_total{clientId="producer-1",broker="1001",} 225.0
+kafka_producer_producer_metrics_request_rate{clientId="producer-1",broker="1001",} 250.0
+kafka_producer_producer_metrics_request_total{clientId="producer-1",broker="1001",} 9000000.0
+kafka_producer_producer_metrics_request_latency_avg{clientId="producer-1",broker="1001",} 12.5
+kafka_producer_producer_metrics_request_latency_max{clientId="producer-1",broker="1001",} 245.0
+kafka_producer_producer_metrics_request_latency_50th{clientId="producer-1",broker="1001",} 11.2
+kafka_producer_producer_metrics_request_latency_95th{clientId="producer-1",broker="1001",} 28.7
+kafka_producer_producer_metrics_request_latency_99th{clientId="producer-1",broker="1001",} 52.3
+kafka_producer_producer_metrics_outgoing_byte_rate{clientId="producer-1",broker="1001",} 1310720.0
+kafka_producer_producer_metrics_outgoing_byte_total{clientId="producer-1",broker="1001",} 47185920000.0
+kafka_producer_producer_metrics_batch_size_avg{clientId="producer-1",broker="1001",} 5120.0
+kafka_producer_producer_metrics_batch_size_max{clientId="producer-1",broker="1001",} 16384.0
+kafka_producer_producer_metrics_batch_size_50th{clientId="producer-1",broker="1001",} 4096.0
+kafka_producer_producer_metrics_batch_size_75th{clientId="producer-1",broker="1001",} 6144.0
+kafka_producer_producer_metrics_batch_size_95th{clientId="producer-1",broker="1001",} 12288.0
+kafka_producer_producer_metrics_compression_rate_avg{clientId="producer-1",broker="1001",} 0.65
+kafka_producer_producer_metrics_io_wait_time_ns_avg{clientId="producer-1",broker="1001",} 125000.0
+kafka_producer_producer_metrics_io_time_ns_avg{clientId="producer-1",broker="1001",} 45000.0
+kafka_producer_producer_node_metrics_request_latency_avg{clientId="producer-1",broker="1001",node="1001",} 8.2
+kafka_producer_producer_node_metrics_request_latency_avg{clientId="producer-1",broker="1001",node="1002",} 9.1
+kafka_producer_producer_node_metrics_request_latency_avg{clientId="producer-1",broker="1001",node="1003",} 8.7
+kafka_producer_producer_topic_metrics_byte_rate{clientId="producer-1",broker="1001",topic="orders",} 1048576.0
+kafka_producer_producer_topic_metrics_record_send_rate{clientId="producer-1",broker="1001",topic="orders",} 1000.0
+
+# ----------------------------------------------------------------------
+# Producer: transaction-processor-01 (Client ID: producer-2, App: tx-processor)
+# ----------------------------------------------------------------------
+
+kafka_producer_producer_metrics_record_send_rate{clientId="producer-2",broker="1002",client_software_name="tx-processor",} 625.0
+kafka_producer_producer_metrics_record_error_rate{clientId="producer-2",broker="1002",} 0.001
+kafka_producer_producer_metrics_record_retry_rate{clientId="producer-2",broker="1002",} 0.003
+kafka_producer_producer_metrics_request_rate{clientId="producer-2",broker="1002",} 125.0
+kafka_producer_producer_metrics_outgoing_byte_rate{clientId="producer-2",broker="1002",} 655360.0
+kafka_producer_producer_metrics_batch_size_avg{clientId="producer-2",broker="1002",} 4096.0
+kafka_producer_producer_topic_metrics_byte_rate{clientId="producer-2",broker="1002",topic="transactions",} 524288.0
+kafka_producer_producer_topic_metrics_record_send_rate{clientId="producer-2",broker="1002",topic="transactions",} 500.0
+
+# ----------------------------------------------------------------------
+# Producer: event-collector-01 (Client ID: producer-3, App: event-collector)
+# ----------------------------------------------------------------------
+
+kafka_producer_producer_metrics_record_send_rate{clientId="producer-3",broker="1003",client_software_name="event-collector",} 2400.0
+kafka_producer_producer_metrics_record_error_rate{clientId="producer-3",broker="1003",} 0.0015
+kafka_producer_producer_metrics_record_retry_rate{clientId="producer-3",broker="1003",} 0.004
+kafka_producer_producer_metrics_request_rate{clientId="producer-3",broker="1003",} 300.0
+kafka_producer_producer_metrics_outgoing_byte_rate{clientId="producer-3",broker="1003",} 786432.0
+kafka_producer_producer_topic_metrics_byte_rate{clientId="producer-3",broker="1003",topic="user-events",} 524288.0
+kafka_producer_producer_topic_metrics_byte_rate{clientId="producer-3",broker="1003",topic="clickstream",} 262144.0
+
+# ----------------------------------------------------------------------
+# Producer: log-forwarder-01 (Client ID: producer-4, App: log-forwarder)
+# ----------------------------------------------------------------------
+
+kafka_producer_producer_metrics_record_send_rate{clientId="producer-4",broker="1001",client_software_name="log-forwarder",} 450.0
+kafka_producer_producer_metrics_outgoing_byte_rate{clientId="producer-4",broker="1001",} 2359296.0
+kafka_producer_producer_topic_metrics_byte_rate{clientId="producer-4",broker="1001",topic="logs",} 2359296.0
+
+# ----------------------------------------------------------------------
+# Producer: metric-aggregator-01 (Client ID: producer-5, App: metric-aggregator)
+# ----------------------------------------------------------------------
+
+kafka_producer_producer_metrics_record_send_rate{clientId="producer-5",broker="1002",client_software_name="metric-aggregator",} 50.0
+kafka_producer_producer_metrics_outgoing_byte_rate{clientId="producer-5",broker="1002",} 25600.0
+kafka_producer_producer_topic_metrics_byte_rate{clientId="producer-5",broker="1002",topic="metrics",} 25600.0
+
+# ----------------------------------------------------------------------
+# Additional Producers (6-15) - Summary
+# Each with similar patterns, distributing across topics
+# ----------------------------------------------------------------------
+
+kafka_producer_producer_metrics_record_send_rate{clientId="producer-6",broker="1003",client_software_name="fraud-detection",} 300.0
+kafka_producer_producer_topic_metrics_byte_rate{clientId="producer-6",broker="1003",topic="transactions",} 307200.0
+
+kafka_producer_producer_metrics_record_send_rate{clientId="producer-7",broker="1001",client_software_name="inventory-service",} 200.0
+kafka_producer_producer_topic_metrics_byte_rate{clientId="producer-7",broker="1001",topic="orders",} 204800.0
+
+kafka_producer_producer_metrics_record_send_rate{clientId="producer-8",broker="1002",client_software_name="recommendation-engine",} 180.0
+kafka_producer_producer_topic_metrics_byte_rate{clientId="producer-8",broker="1002",topic="clickstream",} 184320.0
+
+kafka_producer_producer_metrics_record_send_rate{clientId="producer-9",broker="1003",client_software_name="audit-logger",} 150.0
+kafka_producer_producer_topic_metrics_byte_rate{clientId="producer-9",broker="1003",topic="logs",} 786432.0
+
+kafka_producer_producer_metrics_record_send_rate{clientId="producer-10",broker="1001",client_software_name="user-profile-updater",} 80.0
+kafka_producer_producer_topic_metrics_byte_rate{clientId="producer-10",broker="1001",topic="user-events",} 81920.0
+
+kafka_producer_producer_metrics_record_send_rate{clientId="producer-11",broker="1002",client_software_name="payment-processor",} 220.0
+kafka_producer_producer_topic_metrics_byte_rate{clientId="producer-11",broker="1002",topic="transactions",} 225280.0
+
+kafka_producer_producer_metrics_record_send_rate{clientId="producer-12",broker="1003",client_software_name="notification-service",} 350.0
+kafka_producer_producer_topic_metrics_byte_rate{clientId="producer-12",broker="1003",topic="user-events",} 112640.0
+
+kafka_producer_producer_metrics_record_send_rate{clientId="producer-13",broker="1001",client_software_name="analytics-processor",} 280.0
+kafka_producer_producer_topic_metrics_byte_rate{clientId="producer-13",broker="1001",topic="clickstream",} 286720.0
+
+kafka_producer_producer_metrics_record_send_rate{clientId="producer-14",broker="1002",client_software_name="stock-updater",} 120.0
+kafka_producer_producer_topic_metrics_byte_rate{clientId="producer-14",broker="1002",topic="orders",} 122880.0
+
+kafka_producer_producer_metrics_record_send_rate{clientId="producer-15",broker="1003",client_software_name="monitoring-agent",} 75.0
+kafka_producer_producer_topic_metrics_byte_rate{clientId="producer-15",broker="1003",topic="metrics",} 38400.0
+
+# ======================================================================
+# CONSUMER METRICS (20 Consumers)
+# ======================================================================
+
+# ----------------------------------------------------------------------
+# Consumer: order-consumer-group-01 (Client ID: consumer-1, Group: order-processors)
+# ----------------------------------------------------------------------
+
+kafka_consumer_consumer_fetch_manager_metrics_records_consumed_rate{clientId="consumer-1",broker="1001",group="order-processors",} 900.0
+kafka_consumer_consumer_fetch_manager_metrics_records_consumed_total{clientId="consumer-1",broker="1001",} 32400000.0
+kafka_consumer_consumer_fetch_manager_metrics_bytes_consumed_rate{clientId="consumer-1",broker="1001",group="order-processors",} 943718.0
+kafka_consumer_consumer_fetch_manager_metrics_fetch_rate{clientId="consumer-1",broker="1001",} 5.2
+kafka_consumer_consumer_fetch_manager_metrics_fetch_total{clientId="consumer-1",broker="1001",} 187200.0
+kafka_consumer_consumer_fetch_manager_metrics_fetch_latency_avg{clientId="consumer-1",broker="1001",} 24.3
+kafka_consumer_consumer_fetch_manager_metrics_fetch_latency_max{clientId="consumer-1",broker="1001",} 187.0
+kafka_consumer_consumer_fetch_manager_metrics_fetch_latency_50th{clientId="consumer-1",broker="1001",} 22.1
+kafka_consumer_consumer_fetch_manager_metrics_fetch_latency_95th{clientId="consumer-1",broker="1001",} 45.6
+kafka_consumer_consumer_fetch_manager_metrics_fetch_latency_99th{clientId="consumer-1",broker="1001",} 98.2
+kafka_consumer_consumer_fetch_manager_metrics_records_lag_max{clientId="consumer-1",broker="1001",topic="orders",} 1250.0
+kafka_consumer_consumer_fetch_manager_metrics_records_lag_max{clientId="consumer-1",broker="1001",topic="orders",partition="0",} 250.0
+kafka_consumer_consumer_fetch_manager_metrics_records_lag_max{clientId="consumer-1",broker="1001",topic="orders",partition="1",} 300.0
+kafka_consumer_consumer_fetch_manager_metrics_records_lag_max{clientId="consumer-1",broker="1001",topic="orders",partition="2",} 200.0
+kafka_consumer_consumer_fetch_manager_metrics_records_lag_max{clientId="consumer-1",broker="1001",topic="orders",partition="3",} 150.0
+kafka_consumer_consumer_fetch_manager_metrics_records_lag_max{clientId="consumer-1",broker="1001",topic="orders",partition="4",} 350.0
+kafka_consumer_consumer_fetch_manager_metrics_records_lag_avg{clientId="consumer-1",broker="1001",topic="orders",} 425.0
+kafka_consumer_consumer_coordinator_metrics_assigned_partitions{clientId="consumer-1",broker="1001",} 6.0
+kafka_consumer_consumer_coordinator_metrics_commit_latency_avg{clientId="consumer-1",broker="1001",} 8.7
+kafka_consumer_consumer_coordinator_metrics_commit_rate{clientId="consumer-1",broker="1001",} 0.5
+kafka_consumer_consumer_coordinator_metrics_heartbeat_rate{clientId="consumer-1",broker="1001",} 0.33
+kafka_consumer_consumer_coordinator_metrics_join_rate{clientId="consumer-1",broker="1001",} 0.001
+kafka_consumer_consumer_coordinator_metrics_sync_rate{clientId="consumer-1",broker="1001",} 0.001
+
+# ----------------------------------------------------------------------
+# Consumer: transaction-validator-group (Client ID: consumer-2, Group: transaction-validators)
+# ----------------------------------------------------------------------
+
+kafka_consumer_consumer_fetch_manager_metrics_records_consumed_rate{clientId="consumer-2",broker="1002",group="transaction-validators",} 500.0
+kafka_consumer_consumer_fetch_manager_metrics_bytes_consumed_rate{clientId="consumer-2",broker="1002",} 524288.0
+kafka_consumer_consumer_fetch_manager_metrics_records_lag_max{clientId="consumer-2",broker="1002",topic="transactions",} 75.0
+kafka_consumer_consumer_coordinator_metrics_assigned_partitions{clientId="consumer-2",broker="1002",} 4.0
+
+# ----------------------------------------------------------------------
+# Consumer: user-events-processor (Client ID: consumer-3, Group: event-analytics)
+# ----------------------------------------------------------------------
+
+kafka_consumer_consumer_fetch_manager_metrics_records_consumed_rate{clientId="consumer-3",broker="1003",group="event-analytics",} 1500.0
+kafka_consumer_consumer_fetch_manager_metrics_bytes_consumed_rate{clientId="consumer-3",broker="1003",} 1572864.0
+kafka_consumer_consumer_fetch_manager_metrics_records_lag_max{clientId="consumer-3",broker="1003",topic="user-events",} 3250.0
+kafka_consumer_consumer_coordinator_metrics_assigned_partitions{clientId="consumer-3",broker="1003",} 8.0
+
+# ----------------------------------------------------------------------
+# Consumer: clickstream-analytics (Client ID: consumer-4, Group: click-analytics)
+# ----------------------------------------------------------------------
+
+kafka_consumer_consumer_fetch_manager_metrics_records_consumed_rate{clientId="consumer-4",broker="1001",group="click-analytics",} 2800.0
+kafka_consumer_consumer_fetch_manager_metrics_bytes_consumed_rate{clientId="consumer-4",broker="1001",} 2867200.0
+kafka_consumer_consumer_fetch_manager_metrics_records_lag_max{clientId="consumer-4",broker="1001",topic="clickstream",} 150.0
+
+# ----------------------------------------------------------------------
+# Consumer: log-indexer (Client ID: consumer-5, Group: log-processors)
+# ----------------------------------------------------------------------
+
+kafka_consumer_consumer_fetch_manager_metrics_records_consumed_rate{clientId="consumer-5",broker="1002",group="log-processors",} 450.0
+kafka_consumer_consumer_fetch_manager_metrics_bytes_consumed_rate{clientId="consumer-5",broker="1002",} 2359296.0
+kafka_consumer_consumer_fetch_manager_metrics_records_lag_max{clientId="consumer-5",broker="1002",topic="logs",} 50.0
+
+# ----------------------------------------------------------------------
+# Consumer: metrics-storage (Client ID: consumer-6, Group: metrics-persisters)
+# ----------------------------------------------------------------------
+
+kafka_consumer_consumer_fetch_manager_metrics_records_consumed_rate{clientId="consumer-6",broker="1003",group="metrics-persisters",} 50.0
+kafka_consumer_consumer_fetch_manager_metrics_bytes_consumed_rate{clientId="consumer-6",broker="1003",} 25600.0
+kafka_consumer_consumer_fetch_manager_metrics_records_lag_max{clientId="consumer-6",broker="1003",topic="metrics",} 10.0
+
+# ----------------------------------------------------------------------
+# Additional Consumers (7-20) - Summary
+# ----------------------------------------------------------------------
+
+# Order processors group - multiple members
+kafka_consumer_consumer_fetch_manager_metrics_records_consumed_rate{clientId="consumer-7",broker="1001",group="order-processors",} 850.0
+kafka_consumer_consumer_fetch_manager_metrics_records_lag_max{clientId="consumer-7",broker="1001",topic="orders",} 1150.0
+
+kafka_consumer_consumer_fetch_manager_metrics_records_consumed_rate{clientId="consumer-8",broker="1002",group="order-processors",} 875.0
+kafka_consumer_consumer_fetch_manager_metrics_records_lag_max{clientId="consumer-8",broker="1002",topic="orders",} 1050.0
+
+# Transaction validators group - multiple members
+kafka_consumer_consumer_fetch_manager_metrics_records_consumed_rate{clientId="consumer-9",broker="1003",group="transaction-validators",} 480.0
+kafka_consumer_consumer_fetch_manager_metrics_records_consumed_rate{clientId="consumer-10",broker="1001",group="transaction-validators",} 495.0
+
+# Event analytics group - multiple members
+kafka_consumer_consumer_fetch_manager_metrics_records_consumed_rate{clientId="consumer-11",broker="1002",group="event-analytics",} 1450.0
+kafka_consumer_consumer_fetch_manager_metrics_records_consumed_rate{clientId="consumer-12",broker="1003",group="event-analytics",} 1475.0
+kafka_consumer_consumer_fetch_manager_metrics_records_consumed_rate{clientId="consumer-13",broker="1001",group="event-analytics",} 1425.0
+
+# Click analytics group - multiple members
+kafka_consumer_consumer_fetch_manager_metrics_records_consumed_rate{clientId="consumer-14",broker="1002",group="click-analytics",} 2750.0
+kafka_consumer_consumer_fetch_manager_metrics_records_consumed_rate{clientId="consumer-15",broker="1003",group="click-analytics",} 2725.0
+
+# Log processors group - multiple members
+kafka_consumer_consumer_fetch_manager_metrics_records_consumed_rate{clientId="consumer-16",broker="1001",group="log-processors",} 440.0
+kafka_consumer_consumer_fetch_manager_metrics_records_consumed_rate{clientId="consumer-17",broker="1002",group="log-processors",} 445.0
+
+# Fraud detection consumers
+kafka_consumer_consumer_fetch_manager_metrics_records_consumed_rate{clientId="consumer-18",broker="1003",group="fraud-detectors",} 290.0
+kafka_consumer_consumer_fetch_manager_metrics_records_lag_max{clientId="consumer-18",broker="1003",topic="transactions",} 120.0
+
+# Inventory consumers
+kafka_consumer_consumer_fetch_manager_metrics_records_consumed_rate{clientId="consumer-19",broker="1001",group="inventory-updaters",} 195.0
+kafka_consumer_consumer_fetch_manager_metrics_records_lag_max{clientId="consumer-19",broker="1001",topic="orders",} 80.0
+
+# Notification consumers
+kafka_consumer_consumer_fetch_manager_metrics_records_consumed_rate{clientId="consumer-20",broker="1002",group="notifications",} 340.0
+kafka_consumer_consumer_fetch_manager_metrics_records_lag_max{clientId="consumer-20",broker="1002",topic="user-events",} 450.0
+
+# ======================================================================
+# OS AND JVM METRICS (For each broker)
+# ======================================================================
+
+# Broker 1 JVM Metrics
+jvm_memory_bytes_used{broker="1001",area="heap",} 4294967296.0
+jvm_memory_bytes_used{broker="1001",area="nonheap",} 536870912.0
+jvm_memory_bytes_max{broker="1001",area="heap",} 8589934592.0
+jvm_memory_bytes_max{broker="1001",area="nonheap",} 1073741824.0
+jvm_memory_pool_bytes_used{broker="1001",pool="G1 Eden Space",} 1073741824.0
+jvm_memory_pool_bytes_used{broker="1001",pool="G1 Old Gen",} 3221225472.0
+jvm_memory_pool_bytes_used{broker="1001",pool="G1 Survivor Space",} 134217728.0
+jvm_gc_collection_seconds_count{broker="1001",gc="G1 Young Generation",} 1250.0
+jvm_gc_collection_seconds_sum{broker="1001",gc="G1 Young Generation",} 625.0
+jvm_gc_collection_seconds_count{broker="1001",gc="G1 Old Generation",} 25.0
+jvm_gc_collection_seconds_sum{broker="1001",gc="G1 Old Generation",} 75.0
+jvm_threads_current{broker="1001",} 187.0
+jvm_threads_daemon{broker="1001",} 25.0
+jvm_threads_peak{broker="1001",} 210.0
+jvm_classes_loaded{broker="1001",} 12540.0
+process_cpu_seconds_total{broker="1001",} 86400.0
+process_open_fds{broker="1001",} 512.0
+process_max_fds{broker="1001",} 65535.0
+process_resident_memory_bytes{broker="1001",} 8589934592.0
+process_virtual_memory_bytes{broker="1001",} 12884901888.0
+
+# Broker 2 JVM Metrics
+jvm_memory_bytes_used{broker="1002",area="heap",} 4294967296.0
+jvm_memory_bytes_max{broker="1002",area="heap",} 8589934592.0
+jvm_gc_collection_seconds_count{broker="1002",gc="G1 Young Generation",} 1245.0
+jvm_threads_current{broker="1002",} 182.0
+process_open_fds{broker="1002",} 498.0
+
+# Broker 3 JVM Metrics
+jvm_memory_bytes_used{broker="1003",area="heap",} 4294967296.0
+jvm_memory_bytes_max{broker="1003",area="heap",} 8589934592.0
+jvm_gc_collection_seconds_count{broker="1003",gc="G1 Young Generation",} 1255.0
+jvm_threads_current{broker="1003",} 185.0
+process_open_fds{broker="1003",} 505.0
+
+# ======================================================================
+# END OF METRICS - Total approximately 10,000+ metric data points
+# ======================================================================
